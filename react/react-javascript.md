@@ -21,9 +21,13 @@
 
     * `React components` have a `render()` function that defines the virtual DOM elements.
     
-    * `React components` in the virtual DOM are mapped to browser `DOM elements`.
+    * `React components` in the `virtual DOM` are mapped to `browser DOM` elements`.
 
     * `React components` are mapped via the name of the component to provide custom HTML tags/elements.
+    
+    * `React components` returned from `render()` can be created using JavaScript/TypeScript via `React.createElement()`.
+
+    * `React components` returned from `render()` can be created using `jsx`/`tsx`. If so, they are transpiled to JavaScript.
 
 
 * `React` continuously `synchronises` the virtual DOM and physical DOM.
@@ -57,6 +61,9 @@ class AComponent extends Component {
 
 ### Basic React `index.html`
 
+The root element of the React application.
+
+
 ```html
 <html>
     ...
@@ -64,6 +71,78 @@ class AComponent extends Component {
     ...
 </html>
 
+```
+
+### Basic React JSX Transpilation
+
+ES6, ES5, JSX, TypeScript,  TSX, etc. get transpiled to JavaScript.
+
+```jsx
+const element = <h1>Hello World!</h1>;
+```
+... becomes ...
+
+```javascript
+"use strict"
+var element = React.createElement(
+    "h1", null, "Hello World"
+);
+```
+
+### Raw React DOM Example
+
+```javascript
+import React from "react";
+import ReactDOM from "reatc-dom";
+
+// Create an element. NB: Could also use JSX here.
+// const element = <h1>Hello World!</h1>;
+const element = React.createElement(
+    "h1", null, "Hello World!"
+);
+
+// Render the virtual DOM element to a location on the browser DOM.
+ReactDOM.render(element, document.getElementById("root"))
+```
+
+### Basic React Component
+
+1. The component.
+
+    ```javascript
+    // Import the base react component.
+    import React { Component } from "react";
+
+    // Create a basic React component class.
+    class Counter extends Component {
+        state = {};
+        // Render a JSX element.
+        render() {
+            return <h1>Hello World!</h1>
+        }
+    }
+
+    export default Counter;
+    ```
+
+2. Index.js
+
+    ```javascript
+    ReactDOM.render(<CounM.render(<Counter/>, document.getElementById("root");
+    ```
+
+### Bootstrap Installation
+
+1. Install.
+
+```
+npm install bootstrap
+```
+
+2. Import into `index.js`.
+
+```javascript
+import "bootstrap/dist/css/bootstrap.css"
 ```
 
 ---
@@ -78,6 +157,8 @@ class AComponent extends Component {
 * Visual Studio Code [`Simple React Snippets`](https://github.com/burkeholland/simple-react-snippets) - Snippets for JavaScript react.
 
 * Visual Studio Code [`Prettier`](https://github.com/prettier/prettier-vscode) - Code formatting for JavaScript, TypeScript, and, CSS.
+
+* [Babel](https://babeljs.io/repl) - Babel JavaScript transpiler playground.
 
 
 
