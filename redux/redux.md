@@ -23,11 +23,14 @@
 
 * __`Action Creator`__ - The entity (function) that creates the `action`, for example, a web page component.
 
+
+
 * __`Action`__ - A type of event that consists of a `type` and `payload`.
     
     * __`Type`__ - This is used in a `reducer` to process the `payload`. It is the operation to be performed.
 
     * __`Payload`__ - The data to be used in the operation.
+
 
 * __`Dispatch`__ - A special `dispatch` function that wraps a set of `reducers` and sends an incoming `action` to all of them.
 

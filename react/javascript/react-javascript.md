@@ -12,6 +12,10 @@
 
     * `React components` are pure JavaScript/TypeScript.
 
+        * `React components` can be defined as a `class` {extending `React.Component`}.
+
+        * `React components` can be defined as a `function`. 
+
     * `React components` can be used as HTML tags and extend the HTML vocabulary.
 
     * `React applications` are a __tree of components__,
