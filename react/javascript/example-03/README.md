@@ -1,9 +1,9 @@
-# JavaScript (ES6) React Example-02
+# Example-03 - React `JSX` 
 
 
 ## Overview
 
-Simple `React` component example.
+Simple `React` component `JSX` example.
 
 ---
 
