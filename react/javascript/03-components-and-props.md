@@ -52,6 +52,31 @@
     }
     ```
 
+* `props.children` can be used access embedded components to allow re-use. This allows one component to be passed into another so the parent component wraps the child component:
+    ```
+    const App = () => {
+        return (
+            <div>
+                <Segment>
+                    <div className="ui icon header">
+                        <i className="pdf file outline icon"></i>
+                        No documents are listed for this customer.
+                    </div>
+                    <div className="ui primary button">Add Document</div>
+                </Segment>
+            </div>
+        );
+    }
+
+    const Segment = props => {
+        return (
+            <div className="ui placeholder segment">
+                {props.children}
+            </div>
+        );
+    }
+    ```
+
 * `props` __read only__.
 
 ---
