@@ -12,3 +12,10 @@
 
 ## Notes
 
+### Creating new JSX Elements.
+
+* __Identify JSX for component__
+
+* __Name new JSX component__
+
+* __Creeate new JSX file__
