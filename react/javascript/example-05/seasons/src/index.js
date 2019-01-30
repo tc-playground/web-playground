@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import SeasonDisplay from "./SeasonDisplay";
+import Spinner from "./Spinner";
+
 // Class Based component
 //
 class App extends React.Component {
@@ -28,25 +31,31 @@ class App extends React.Component {
         // NB: Setting state is always additive.
         this.setState({ errorMessage: err.message });
       }
-    );    
+    );
   }
 
   componentDidUpdate() {
     console.log("componentDidUpdate...");
   }
 
-  render() {
-    console.log("render...");
+  createContent() {
     // NB: Do not put slow calls in render() method!
     //     It may be called a lot!
     // NB: Conditional rendering!
     if (this.state.lat && !this.state.errorMessage) {
-      return <div>Latitude: {this.state.lat}</div>;
+      return <SeasonDisplay lat={this.state.lat} />;
     }
     if (!this.state.lat && this.state.errorMessage) {
       return <div>Error: {this.state.errorMessage}</div>;
     }
-    return <div>Loading...</div>;
+    return <Spinner text="Please accept location request."/>;      
+  };
+
+  render() {
+    console.log("render...");
+    // NB: Wrap content with multiple returns in a function.
+    return this.createContent();
+
   }
 
   componentWillUnmount() {
