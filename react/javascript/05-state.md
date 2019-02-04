@@ -23,3 +23,19 @@
 * `state` is __NOT the same as__ `props`.
 
 * `state` can passed from a `parent component` to a `child component` as `props`.
+
+---
+
+## Shared State
+
+* `react` components exist in hierarchy.
+
+* If different `react` components need to share state; then that state needs to be managed by a `common parent` in the hierarchy.
+
+* The `common parent` holds the state and passes the state down through the `common ancestors` in the hierarchy to the `children` using `props`.
+
+* In `react` state can only be updated with the `setState()` method.
+
+* If the state need to be modified by a `child component` then the `common parent` needs to also pass a `callback` function down through the `props` to the child components that need to mutate state.
+
+

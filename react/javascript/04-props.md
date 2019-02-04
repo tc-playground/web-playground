@@ -66,6 +66,10 @@
 
 * `props` __read only__. All React components must act like `pure functions` with respect to their props.
 
+* `props` __go down__. In general, props are passed down the `component hierachy`.
+
+* `props callback functions` __can be passed down from `parent components` to `child components` to allow them to update parents and share functionality between the children.
+
 * `props defaults` for class or function components can be specified by setting the`defaultProps`.
     ```
     MyComponent.defaultProps = {

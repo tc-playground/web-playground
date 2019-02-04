@@ -78,6 +78,35 @@
 
 ---
 
+## Conditional Views
+
+---
+
+## Lists and Looping
+
+* `List` components and other forms of looping are handle in `jsx` with standard JavaScript, TypeScript, etc.
+
+    ```javascript
+    import React from "react";
+
+    const ImageList = props => {
+
+        const images = props.images.map(image => {
+            return <img key={image.id} src={image.urls.regular}/> 
+        });
+
+        return (
+            <div>{ images } </div>
+        )
+    }
+
+    export default ImageList;
+    ```
+
+* unique `key props` should be specified for each `item` in a list. This is to allow `react` to know when items are added, removed, or updated. This allows it to efficiently render the list as it only needs to render items that have changed.
+
+---
+
 ## References
 
 * [JSX Intro](https://reactjs.org/docs/introducing-jsx.html)
