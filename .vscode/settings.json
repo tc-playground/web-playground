@@ -7,8 +7,10 @@
         "inode",
         "inotify",
         "lname",
+        "minmax",
         "sysctl",
         "transpiled",
-        "transpiler"
+        "transpiler",
+        "unsplash"
     ]
 }
