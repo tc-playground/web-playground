@@ -38,4 +38,3 @@
 
 * If the state need to be modified by a `child component` then the `common parent` needs to also pass a `callback` function down through the `props` to the child components that need to mutate state.
 
-
