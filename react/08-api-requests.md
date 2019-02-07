@@ -37,6 +37,10 @@
         });
         ```
 
+* `axios` is an npm JavaScript library for HTTP requests.
+
+    * __Install__ - `npm install --save axios`
+
 ---
 
 ## CORS - Cross-Origin Request
