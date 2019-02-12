@@ -52,7 +52,20 @@
 
     * `state` can only ever be changed through the `Action creator`, `action`, `dispatch`, `state` flow.
 
-    * >NB: It using `react` this will render any components that have changed.
+    * >NB: `react` will render any components that have changed.
+
+---
+
+## Functional API
+
+* `redux`
+    * `createStore()`
+    * `combineReducers()`
+    * `applyMiddleware()`
+
+* `react-redux`
+    * `mapStateToProps()`
+    * `connect()`
 
 ---
 
