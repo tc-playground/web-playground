@@ -1,11 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchUser } from "../actions";
+
+// NB: No longer used as users are fetched in composite action creator.
+// import { fetchUser } from "../actions";
 
 class UserHeader extends React.Component {
-  componentDidMount() {
-    this.props.fetchUser(this.props.userId);
-  }
+
+  // NB: No longer used as users are fetched in composite action creator.
+  // componentDidMount() {
+  //   this.props.fetchUser(this.props.userId);
+  // }
 
   render() {
     const { user } = this.props;
@@ -18,8 +22,8 @@ class UserHeader extends React.Component {
 
 // NB: 'ownProps' are the props being passed into the component.
 const mapStateToProps = (state, ownProps) => {
-  // NB: Better top find the required user here than 
-  //     pass all users into the component and find it 
+  // NB: Better top find the required user here than
+  //     pass all users into the component and find it
   //     during rendering.
   const user = state.users.find(user => {
     return user.id === ownProps.userId;
@@ -28,6 +32,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 export default connect(
-  mapStateToProps,
-  { fetchUser }
+  mapStateToProps
+  // NB: No longer used as users are fetched in composite action creator.
+  // { fetchUser }
 )(UserHeader);
