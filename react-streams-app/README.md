@@ -6,6 +6,11 @@
 npm install --save react-router-dom
 ```
 
+### Webpack Environment Variables
+```
+npm install --save-dev dotenv
+```
+
 ---
 
 ## References
