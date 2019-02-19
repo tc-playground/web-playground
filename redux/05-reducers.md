@@ -1,17 +1,26 @@
-# Reducers
+# Redux Reducers
 
 ## Introduction
 
 - `reducers` are **contained** by the `redux store`.
 
-- `reducers` are fed ``action creator``actions`via the`dispatch` method and generate a new state from the current state.
+- `reducers` are fed ``action creator` `actions` via the `dispatch` method and generate a new state from the current state.
 
 - `reducer` prototype:
   ```
-  export default (state = null, action) {
-      newState = clone(state);
-      doStuff(newState);
-      return newState;
+  const INITIAL_STATE = {
+      lastAction: null
+  };
+
+  export default ( state = INITIAL_STATE, action ) => {
+      switch (action.type) {
+          case 'ACTION_01':
+              return { ...state, lastAction: 'A1' };
+          case 'ACTION_02':
+              return { ...state, lastAction: 'A2' };
+          default:
+              return state;
+      }
   }
   ```
 
@@ -52,3 +61,24 @@ export default combineReducers({
   }
 });
 ```
+
+---
+
+## Redux Reducers - Common Functions
+
+* `dispatch()`
+
+* `combineReducers()` - Used to compose a set of `reducers` and `dispatch()` each `action` to all of them. 
+  ```javascript
+  import { combineReducers } from "redux";
+
+  export default combineReducers({
+    noop: () => {
+      return 'noop';
+    },
+    reducer1: reducer1(),
+    reducer2: reducer2()
+  });
+
+  ```
+

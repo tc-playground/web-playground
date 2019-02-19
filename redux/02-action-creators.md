@@ -2,6 +2,8 @@
 
 ## Introduction
 
+* `action creators` can be used to fetch data, or, create an action to fetch data (e.g. `redux-sagas`).
+
 * `Action creators` come in two types:
 
     * `Synchronous action creators` - Instantly returns an action with data ready to go.

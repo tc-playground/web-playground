@@ -38,7 +38,7 @@
     * __`Payload`__ - The data to be used in the operation.
 
 
-3. __`Dispatch`__ - A special `dispatch` __function++ that wraps a set of `reducers` and sends a copy of the incoming `action` to all of them.
+3. __`Dispatch`__ - A special `dispatch` __function__ that wraps a set of `reducers` and sends a copy of the incoming `action` to all of them.
 
 
 4. __`Reducer`__ - A big switch statement. A reducer takes an `action payload` and performs operation based on the `action type`.
@@ -62,6 +62,7 @@
     * `createStore()`
     * `combineReducers()`
     * `applyMiddleware()`
+    * `dispatch()`
 
 * `react-redux`
     * `mapStateToProps()`
