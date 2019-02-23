@@ -10,9 +10,12 @@ class StreamCreate extends React.Component {
   //   );
   // }
   // Short syntax - De-structure input, and, splat all it's properties.
-  renderInput({ input }) {
+  renderInput({ input, label }) {
     return (
-      <input {...input} />
+      <div className="ui form">
+        <label>{label}</label>
+        <input {...input} />
+      </div>
     );
   }
 
@@ -20,8 +23,12 @@ class StreamCreate extends React.Component {
     console.log("StreamCreate this.props: ", this.props);
     return (
       <form>
-        <Field name="title" component={this.renderInput} />
-        <Field name="description" component={this.renderInput} />
+        <Field name="title" component={this.renderInput} label="Enter title" />
+        <Field
+          name="description"
+          component={this.renderInput}
+          label="Enter Description"
+        />
       </form>
     );
   }
