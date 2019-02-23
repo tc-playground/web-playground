@@ -11,6 +11,7 @@ class StreamCreate extends React.Component {
   // }
   // Short syntax - De-structure input, and, splat all it's properties.
   renderInput({ input, label }) {
+
     return (
       <div className="ui form">
         <label>{label}</label>
@@ -19,16 +20,27 @@ class StreamCreate extends React.Component {
     );
   }
 
+  // Non ReduxForm version.
+  // onSubmit(event) {
+  //   event.preventDefault();
+  // }
+
+  // ReduxForm version. Handles some common tasks.
+  onSubmit(formValues) {
+    console.log("StreamCreate.onSubmit(formValues) ", formValues)
+  }
+
   render() {
     console.log("StreamCreate this.props: ", this.props);
     return (
-      <form>
+      <form clasName= "ui from" onsubmit={this.props.handleSubmit(this.onSubmit)}>
         <Field name="title" component={this.renderInput} label="Enter title" />
         <Field
           name="description"
           component={this.renderInput}
           label="Enter Description"
         />
+        <button className="ui button primary">Submit</button>
       </form>
     );
   }
