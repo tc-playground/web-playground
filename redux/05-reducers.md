@@ -2,11 +2,15 @@
 
 ## Introduction
 
-- `reducers` are **contained** by the `redux store`.
+* `reducers` accept `actions` (from `action creators`).
 
-- `reducers` are fed ``action creator` `actions` via the `dispatch` method and generate a new state from the current state.
+* `reducers` produce `state` to add to the `store`.
 
-- `reducer` prototype:
+* `reducers` are **contained** by the `redux store`.
+
+* `reducers` are fed ``action creator` `actions` via the `dispatch` method and __generate a new state__ from the current state.
+
+* `reducer` prototype:
   ```
   const INITIAL_STATE = {
       lastAction: null
