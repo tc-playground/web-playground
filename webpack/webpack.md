@@ -8,6 +8,12 @@
 
 ---
 
+## Environment Variables
+
+* [`webpack` environment variables for React](https://medium.com/@trekinbami/using-environment-variables-in-react-6b0a99d83cf5) 
+
+---
+
 ## Tutorials
 
 * [Webpack/React/TypeScript](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
