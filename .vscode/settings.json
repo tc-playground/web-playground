@@ -1,8 +1,10 @@
 {
     "cSpell.words": [
+        "DOM's",
         "Streamify",
         "Templating",
         "Transpilation",
+        "Truthy",
         "Unmount",
         "composable",
         "inode",
@@ -12,6 +14,7 @@
         "sysctl",
         "transpiled",
         "transpiler",
+        "trjl",
         "unamed",
         "unsplash"
     ]
