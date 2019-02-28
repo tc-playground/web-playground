@@ -10,6 +10,12 @@
 
 ## Environment Variables
 
+* `webpack` can be configured via a `.env` file placed at the root of the project.
+
+    * Configure the source directory when looking for imports: `NODE_PATH=src/`
+
+    > NB: Restart of server, test runners required for changes to take affect.
+
 * [`webpack` environment variables for React](https://medium.com/@trekinbami/using-environment-variables-in-react-6b0a99d83cf5) 
 
 ---
