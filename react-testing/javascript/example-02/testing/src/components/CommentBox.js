@@ -1,5 +1,31 @@
-import React from "react";
+import React from 'react';
 
-export default () => {
-  return <div>Comment Box</div>;
-};
+class CommentBox extends React.Component {
+  state = { comment: '' };
+
+  handleCommentChange = event => {
+    this.setState( { comment: event.target.value } );
+  };
+
+  handleOnSubmit = event => {
+    // By default when a form submits the browser re-fetched the page,
+    // Prevent the browser re-fetching page.
+    event.preventDefault();
+    // TODO: Call action creator and save comment.
+    this.setState( { comment: ''} );
+  };
+
+  render() {
+    return (
+      <form onSubmit={this.handleOnSubmit}>
+        <h4>Add a comment</h4>
+        <textarea onChange={this.handleCommentChange} value={this.state.comment} />
+        <div>
+          <button>Submit</button>
+        </div>
+      </form>
+    );
+  }
+}
+
+export default CommentBox;
