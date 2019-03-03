@@ -27,3 +27,18 @@ it ("has a textarea users can type into", () => {
     // Check the prop value for the component is the same as the event.
     expect(wrapped.find('textarea').prop('value')).toEqual(fakeInput);
 });
+
+it ("clears the textarea when a user clicks on submit", () => {
+    // Ensure the textarea has some content.
+    const fakeInput = "fake test user input";
+    const fakeEvent = { target: { value: fakeInput } };
+    wrapped.find('textarea').simulate('change', fakeEvent);
+    wrapped.update();
+    expect(wrapped.find('textarea').prop('value')).toEqual(fakeInput);
+
+    // Check text area is cleared after 'submit'.
+    wrapped.find('form').simulate('submit');
+    wrapped.update();
+    expect(wrapped.find('textarea').prop('value')).toEqual("");
+
+});
