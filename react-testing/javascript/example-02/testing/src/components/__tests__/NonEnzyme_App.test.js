@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import Root from "Root";
 import App from "../App";
 
 // NB: This component test uses information from a child component.
@@ -10,7 +11,7 @@ it("shows a comment box", () => {
     const div = document.createElement('div');
 
     // Render the component to test onto the div.
-    ReactDOM.render(<App/>, div);
+    ReactDOM.render(<Root><App/></Root>, div);
 
     // You can console log to debug tests.
     // console.log("trjl> div.innerHTML", div.innerHTML);

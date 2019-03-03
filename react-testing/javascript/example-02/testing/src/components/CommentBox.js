@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from 'actions';
 
 class CommentBox extends React.Component {
   state = { comment: '' };
@@ -11,7 +13,10 @@ class CommentBox extends React.Component {
     // By default when a form submits the browser re-fetched the page,
     // Prevent the browser re-fetching page.
     event.preventDefault();
-    // TODO: Call action creator and save comment.
+    
+    // Call action creator and save comment.
+    this.props.saveComment(this.state.comment);
+
     this.setState( { comment: ''} );
   };
 
@@ -28,4 +33,4 @@ class CommentBox extends React.Component {
   }
 }
 
-export default CommentBox;
+export default connect(null, actions)(CommentBox);
