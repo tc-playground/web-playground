@@ -13,8 +13,17 @@ afterEach( () => {
 });
 
 it ("has a textarea and a button", () => {
-    // console.log("wrapped textarea: ", wrapped.find('textarea'));
-    // console.log("wrapped button: ", wrapped.find('button'));
     expect(wrapped.find('textarea').length).toEqual(1);
     expect(wrapped.find('button').length).toEqual(1);
+});
+
+it ("has a textarea users can type into", () => {
+    const fakeInput = "fake test user input";
+    const fakeEvent = { target: { value: fakeInput } };
+    // Simulate an event
+    wrapped.find('textarea').simulate('change', fakeEvent);
+    // Simulate the component being updated,
+    wrapped.update();
+    // Check the prop value for the component is the same as the event.
+    expect(wrapped.find('textarea').prop('value')).toEqual(fakeInput);
 });
