@@ -18,7 +18,11 @@
 
 * `state` can only be updated via the component `setState()` method.
 
-* `setState()` is __additive__. The new state is merged over the old state. Nothing is deleted.
+* `setState(state)` __MUST__ be used to update the state.
+
+* `setState(state)` is __additive__. The new state is merged over the old state. Nothing is deleted.
+
+* `setState(state)` is __ASYNCHRONOUS__.
 
 * `state` is __NOT the same as__ `props`.
 
