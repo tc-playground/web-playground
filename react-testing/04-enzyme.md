@@ -68,6 +68,10 @@
 
 * `prop(key)` - Get the specified prop that was passed into the component.
 
+* `text()` - Get the text coming out of a component. > NB: Not recommended.
+
+* `render() => CheerioWrapper` - Get a `CheerioWrapper` over the data in the component.
+
 * __Example__:
 
     ```javascript

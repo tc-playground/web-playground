@@ -6,6 +6,8 @@
 
 * This can be resolved by creating a `Root` component, This can then be used to wrap the `root application element` in the application, and individual redux elements during testing.
 
+* For testing the redux store can be configured via the `props`.
+
 * __Example__:
 
     * `Root.js`
@@ -18,10 +20,9 @@
 
         import reducers from "reducers";
 
-        const store = createStore(reducers, {});
-
-        export default props => {
-            return <Provider store={store}>{props.children}</Provider>;
+        export default ( { children, initialState = {} } ) => {
+            const store = createStore(reducers, initialState);
+            return <Provider store={store}>{children}</Provider>;
         };
         ```
 
@@ -34,8 +35,10 @@
         import App from "components/App";
         import Root from "Root";
 
+        initialState = {};
+
         ReactDOM.render(
-            <Root>
+            <Root initialState={initialState}>
                 <App/>
             </Root>,
             document.querySelector("#root")

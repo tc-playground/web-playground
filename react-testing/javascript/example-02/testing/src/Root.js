@@ -5,8 +5,7 @@ import { createStore } from "redux";
 
 import reducers from "reducers";
 
-const store = createStore(reducers, {});
-
-export default props => {
-  return <Provider store={store}>{props.children}</Provider>;
+export default ( { children, initialState = {} } ) => {
+  const store = createStore(reducers, initialState);
+  return <Provider store={store}>{children}</Provider>;
 };
