@@ -37,15 +37,17 @@
 
 ## Testing Libraries
 
+* Mocha - JavaScript test runner.
+
+* Chai- JavaScript test runner.
+
 * [jest](https://jestjs.io/) - JavaScript test runner.
 
 * [JSDOM](https://github.com/jsdom/jsdom) - Simulates a browser's (DOM) behaviour.
 
 * [Enzyme](https://airbnb.io/enzyme/) - A JavaScript testing utility for `React` that provides a several component rendering options to make testing easier. 
 
-* Mocha - JavaScript test runner.
-
-* Chai- JavaScript test runner.
+* [Moxios](https://github.com/axios/moxios) - Mock axios requests for testing.
 
 ---
 
@@ -71,6 +73,8 @@
     * [Unsplash developers](http://www.unsplash.com/developers)
 
 * [JSONPlaceholder API](https://jsonplaceholder.typicode.com/) - Online Fake JSON Data API.
+
+* [json-server](https://github.com/typicode/json-server) - Get a full fake REST API with zero coding in less than 30 seconds.
 
 ---
 
