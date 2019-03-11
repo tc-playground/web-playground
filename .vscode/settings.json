@@ -11,6 +11,7 @@
         "inotify",
         "lname",
         "minmax",
+        "moxios",
         "sysctl",
         "transpiled",
         "transpiler",
