@@ -1,5 +1,7 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
+import { connect } from 'react-redux';
+import { createStream } from '../../actions';
 
 class StreamCreate extends React.Component {
   // formProps is wired in on ReduxForm.Field.
@@ -41,8 +43,10 @@ class StreamCreate extends React.Component {
   // }
 
   // ReduxForm version. Handles some common tasks.
-  onSubmit(formValues) {
-    console.log("StreamCreate.onSubmit(formValues) ", formValues);
+  onSubmit = formValues => {
+    // console.log("StreamCreate.onSubmit(formValues) formValues : ", formValues);
+    // console.log("StreamCreate.onSubmit(formValues) this.props :", this.props);
+    this.props.createStream(formValues);
   }
 
   render() {
@@ -83,7 +87,10 @@ const validate = formValues => {
 };
 
 // NB: Causes prop is Object not Function warning.
-export default reduxForm({
+const formWrapped = reduxForm({
   form: "streamCreate",
   validate
 })(StreamCreate);
+
+
+export default connect(null, {createStream})(formWrapped);
