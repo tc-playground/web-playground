@@ -2,6 +2,8 @@
 
 ## Introduction
 
+* `redux-thunk` should be used whenever we create an `asynchronous action creator`.
+
 * `redux thunk` relaxes the rules on `Action creators` to allow them to return an `action object` **OR** a`function` that returns an `action object`.
 
 * If a `function` is returned by an `Action creator`; `redux-thunk` will automatically invoke it with the `dispatch` and `getState` functions.
@@ -16,8 +18,6 @@
 
 ---
 
-* `dispatch()`
-
-* `getState()`
+## References
 
 * [GitHub Redux-Thunk](https://github.com/reduxjs/redux-thunk)
