@@ -1,4 +1,22 @@
 {
   "streams": [
+    {
+      "title": "A Cool Stream",
+      "description": "A Cool Stream",
+      "userId": "109481970420603360825",
+      "id": 1
+    },
+    {
+      "title": "Another Cool Stream",
+      "description": "Another Cool Stream",
+      "userId": "109481970420603360825",
+      "id": 2
+    },
+    {
+      "title": "Wicked Stream",
+      "description": "A Wicked Stream",
+      "userId": "109481970420603360825",
+      "id": 3
+    }
   ]
 }
