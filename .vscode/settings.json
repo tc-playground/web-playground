@@ -12,6 +12,7 @@
         "lname",
         "minmax",
         "moxios",
+        "outdent",
         "sysctl",
         "transpiled",
         "transpiler",
