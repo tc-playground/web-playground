@@ -97,6 +97,30 @@ npm install --save redux-form
 
 ---
 
+## Special Props
+
+* `initialValues` is a special that can be used to initialise a component.
+    
+    ```javascript
+    render() {
+        console.log("StreamEdit - props: ", this.props);
+
+        if (!this.props.stream) {
+        return <div>Loading...</div>;
+        }
+        return (
+        <div>
+            <h3>Edit a Stream</h3>
+            <StreamForm 
+                initialValues={this.props.stream} 
+                onSubmit={this.onSubmit} />
+        </div>
+        );
+    }
+    ```
+
+---
+
 ## ReduxForm Validation
 
 * A external `validate(formValues)` function can be defined to perform form validation.
