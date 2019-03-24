@@ -7,7 +7,7 @@ import StreamForm from "./StreamForm";
 
 class StreamEdit extends React.Component {
   componentDidMount() {
-    fetchStream(this.props.match.params.id);
+    this.props.fetchStream(this.props.match.params.id);
   }
 
   onSubmit = formValues => {
