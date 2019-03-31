@@ -1,5 +1,26 @@
 import React from 'react';
 
-// NB: English will appear as 'this.context' on classes that have a 
-// class attribute 'contextType' of LanguageContext.
-export default React.createContext('english');
+
+// NB: Must be capital 'C' context.
+//     Components must begin with Capital. React think lowercase are standard HTML elements.
+const Context = React.createContext('english');
+
+export class LanguageStore extends React.Component {
+
+    state = { language: "english" };
+
+    onLanguageChange = (language ) => {
+        this.setState({ language });
+    };
+
+    render() {
+        return (
+            <Context.Provider value={{ ...this.state, onLanguageChange: this.onLanguageChange }}>
+                {this.props.children}
+            </Context.Provider>
+        )
+    }
+
+}
+
+export default Context;
