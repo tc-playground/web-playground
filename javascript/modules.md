@@ -12,7 +12,6 @@
 
   ```
   import [VariableName] from [node_module_name | path_to_source_file]
-
   ```
 
 - `ES2015 modules` utilise `export statements`.
