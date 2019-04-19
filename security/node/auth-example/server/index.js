@@ -3,6 +3,7 @@ const express = require('express');
 const http = require('http');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const cors = require('cors');
 
 const router = require('./router');
 
@@ -11,6 +12,8 @@ const router = require('./router');
 const app = express();
 // Express middleware
 app.use(morgan('combined')); // Logging HTTP requests.
+// Use cors.
+app.use(cors());
 app.use(bodyParser.json({ type: '*/*' })); // Parse incoming requests into JSON.
 // Configure routes
 router(app);
