@@ -8,7 +8,10 @@ import * as actions from '../../actions';
 class Signup extends Component {
   onSubmit = formProps => {
     console.log('Signup - onSubmit - formProps: ', formProps);
-    this.props.signup(formProps);
+    this.props.signup(formProps, () => {
+      this.props.history.push('/feature');
+    });
+    
   };
 
   render() {
