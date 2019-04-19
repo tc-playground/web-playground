@@ -10,6 +10,10 @@
 
     * __Install__ - `npm install --save redux`
 
+* `redux` adds `middleware` capabilities.
+
+* `redux` defines a `dispatch` function that acts like a funnel to accept `actions` from an `action creator` and pass it through through the `middleware` and onto the correct `reducers` which then update the `provider` `store` state.
+
 ---
 
 ## [Redux Store](https://redux.js.org/basics/store)
