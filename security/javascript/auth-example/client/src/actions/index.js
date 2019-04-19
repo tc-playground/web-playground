@@ -9,6 +9,7 @@ export const signup = (formProps, callback) => async dispatch =>  {
         const response = await axios.post('http://localhost:3090/signup', formProps);
         dispatch({ type: AUTH_USER, payload: response.data.token });
         // re-direct to feature-route.
+        localStorage.setItem('token', response.data.token);
         callback();
 
     } catch (e) {
