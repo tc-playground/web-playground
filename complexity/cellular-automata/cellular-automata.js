@@ -65,8 +65,8 @@ function sleep(ms) {
 class Grid {
   constructor() {
     // Data Properties
-    this.rows = 70;
-    this.columns = 70;
+    this.rows = 150;
+    this.columns = 150;
     this.cells = [];
     for (var i = 0; i < this.rows; i++) {
       this.cells[i] = [];
@@ -91,7 +91,7 @@ class Grid {
     // (x,y) - x controls horizontal, y-controls vertical.
     this.originX = 10;
     this.originY = 10;
-    this.cellSize = 10;
+    this.cellSize = 4;
 
     this.cellAliveColour = 'white';
     this.cellDeadColour = 'black';
