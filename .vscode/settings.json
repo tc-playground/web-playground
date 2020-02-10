@@ -1,7 +1,9 @@
 {
     "cSpell.words": [
         "Banas",
+        "Codevolution",
         "DOM's",
+        "Gagliardi",
         "Naam",
         "Signup",
         "Streamify",
@@ -15,9 +17,11 @@
         "Youtube",
         "authn",
         "composable",
+        "effectful",
         "inode",
         "inotify",
         "lname",
+        "memoized",
         "minmax",
         "moxios",
         "outdent",
