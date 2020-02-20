@@ -6,7 +6,8 @@ import StateHookCounter from './components/UseState/StateHookCounter';
 import StateHookPreviousStateCounter from './components/UseState/StateHookPreviousStateCounter';
 import StateHookObjectManager from './components/UseState/StateHookObjectManager';
 import StateHookArrayManager from './components/UseState/StateHookArrayManager';
-
+import ClassComponentTitleCounter from './components/UseEffect/Legacy/ClassComponentTitleCounter';
+import EffectHookCounter from './components/UseEffect/EffectHookCounter';
 
 function App() {
   return (
@@ -40,6 +41,17 @@ function App() {
         <label>StateHook Array Manager</label>
         <StateHookArrayManager/> 
       </div>
+
+      <div>
+        <label>ClassComponent Title Counter</label>
+        <ClassComponentTitleCounter/> 
+      </div>
+      
+      <div>
+        <label>EffectHook Title Counter</label>
+        <EffectHookCounter/> 
+      </div>
+
 
     </div>
   );

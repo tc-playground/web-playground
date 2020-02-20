@@ -14,9 +14,9 @@ function StateHookObjectManager() {
 				value={name.lastName}
 				onChange={e => setName({ ...name, lastName: e.target.value })}
 			/>
-			<h2>Your first name is - {name.firstName}</h2>
-			<h2>Your last name is - {name.lastName}</h2>
-			<h2>{JSON.stringify(name)}</h2>
+			<p>Your first name is - {name.firstName}</p>
+			<p>Your last name is - {name.lastName}</p>
+			<p>{JSON.stringify(name)}</p>
 		</form>
 	)
 }
