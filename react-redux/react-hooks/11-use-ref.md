@@ -3,9 +3,9 @@
 
 ## Introduction
 
-* The `react ref system` allow react to access DOM nodes.
+* The `react ref system` allow react to access `DOM nodes`.
 
-    * A common use of the ref system is to perform custom actions such as automatically focusing on an `input` element.
+    * A common use of the ref system is to `perform custom actions` such as automatically focusing on an `input` element.
 
 * The `useRef` hook allows `functional components` to interact with DOM nodes.
 
@@ -13,7 +13,7 @@
 
     * The `reference hook` needs to be attached to the target JSX component using the `ref` attribute.
 
-    * The `reference hook` FOM node can be manipulated via the `current` member variable.
+    * The `reference hook` DOM node can be manipulated via the `current` member variable returned by the useRef hook.
 
 * The `useRef` hook can also be used to store any `mutable value`. 
 
