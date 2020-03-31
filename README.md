@@ -26,3 +26,9 @@ Playing around with JavaScript, TypeScript, React, Redux, WebPack, and that sort
 
 * [VueJS](https://vuejs.org/) - A framework that makes it easy to build applications with the web.
 
+---
+
+## Resources
+
+* [Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg/playlists)
+
