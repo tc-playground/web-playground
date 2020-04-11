@@ -28,6 +28,7 @@
         "outdent",
         "pubspec",
         "sysctl",
+        "themable",
         "todos",
         "transpiled",
         "transpiler",
