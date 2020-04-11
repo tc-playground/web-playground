@@ -27,4 +27,8 @@
 
 ## References
 
- * [Introduction - Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-visual-studio-code-extension)
+* [Introduction - Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-visual-studio-code-extension)
+
+* [Workspace Extensions](https://code.visualstudio.com/api/extension-capabilities/extending-workbench)
+
+* [VSCode Extension Examples](https://github.com/Microsoft/vscode-extension-samples)
