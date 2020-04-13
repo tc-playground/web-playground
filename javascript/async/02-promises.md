@@ -1,4 +1,4 @@
-# JavaScript Async
+# Promises
 
 * __Promise__
 
